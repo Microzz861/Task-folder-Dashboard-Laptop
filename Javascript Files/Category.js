@@ -2,19 +2,53 @@ let tScore = 0;
 const impScore = 5;
 const nScore = 3;
 let count = 6;
-
+let tasked = false;// The tasked has to be an attr with an obj to make  each obj/category have   it's own state of list
+let intcount = 0;
 
 
 
 
 
 function getCatTasks(catID){
-  //without node.createElement/fragment
   const tList = document.createElement('ul');
+
+  
+  console.log(tasked);
+
+  if(tasked === true){ 
+
+    const int = setInterval(()=>{ 
+      if(intcount > 6){
+
+      clearInterval(int);
+      document.getElementById('LIST').remove();
+      console.log('tasked is ' + tasked);     
+      tasked = false;
+ } 
+    else
+    {
+      intcount++; 
+     
+      catID.querySelector('.task-card').classList.remove('task-card-enter');
+      catID.querySelector('.task-card').remove();
+      
+         
+      
+      console.log(intcount);
+
+  }
+  },10);
+  }
+
+  else if(tasked === false){
+  //without node.createElement/fragment
   tList.style.maxHeight='100%';
   tList.style.display='block';
+  tList.style.transition = 'height ease .5s';
   tList.style.flexDirection='columns';
+  tList.id='LIST';
 
+  
 
 
   let taskString = '';
@@ -42,24 +76,32 @@ function getCatTasks(catID){
       </div>
       `;
       tList.appendChild(tItem);
-     
-    
-   
+      document.getElementById('js-cat-task-cat').appendChild(tList);
+      
+      let interval=0;
+     const int1 = setInterval(()=>{ if(interval>count){ clearInterval(int1); tasked = true;} else
+      {
+      document.getElementById('js-cat-task-cat').
+      querySelectorAll('.task-card').
+      forEach((Node)=>Node.classList.add('task-card-enter'));
+      interval++; 
+    }},10);
 
 
       i++;
-      console.log(taskString);
+    //  console.log(taskString);
     }
-  },500);
-
+  },650);
+//document.getElementById('js-task-card').clastList.add('task-card-enter'); 
   console.log(tList);
-  document.getElementById('cat').appendChild(tList);
+  console.log(tasked);
+  
   i=0;
-  setInterval(()=>{  if(i>c) clearInterval();  
-    else{tList.childNodes.
-    forEach(argument,()=>{document.getElementById('js-task-card').
-    classList.add('task-card-enter');})}},500);
-
+  
+  return true;
+  
+}
+return console.log(tasked);
 }
 
 
@@ -70,7 +112,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
   console.log('lol');
   //setTimeout(()=>{document.getElementById('js-task-card2').classList.add('task-card-enter2'); console.log('lol2');},5500);
   let i=0;
-  setInterval(()=>{if (i>9) clearInterval(); else{i++; console.log(i);}},1000);  
+  //setInterval(()=>{if (i>9) clearInterval(); else{i++; console.log(i);}},1000);  
   
 
 

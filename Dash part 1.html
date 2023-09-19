@@ -1,160 +1,223 @@
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="CSS Files/Dashboard.css">
   <script src="Javascript Files/Dasher1.js"></script>
   <script src="Javascript Files/Side.js"></script>
   <link rel="stylesheet" href="CSS Files/Sidebar.css">
+  <link rel="stylesheet" href="CSS Files/cat.css">
+  <script src="Javascript Files/Category.js"></script>
 </head>
 
 <body>
+  
   <header>
-    
-    </header>
 
-    <div class="js-sidebar">
+  </header>
 
-    </div>
+  <div class="js-sidebar">
 
-    <main>
-      <div class="name-container grid">
-        <p class="card-1-name"> Analytics </p>
-      </div>
-
-      <div class="grid">
-        <div class="card-template card-analytics">
-          <div class="contain-svg">
-
-            <div class="prog-text">
-              <svg width="167px" height="167px" viewBox="-20.875 -20.875 208.75 208.75" version="1.1" xmlns="http://www.w3.org/2000/svg" style="transform:rotate(-90deg)">
-                    <circle class="transfiller" r="73.5" cx="83.5" cy="83.5" fill="transparent" stroke="#e0e0e0" stroke-width="15" stroke-dasharray="461.6px" stroke-dashoffset="0"></circle>
-                    <circle r="73.5" cx="83.5" cy="83.5" stroke="#39a300" stroke-width="15" stroke-linecap="round" stroke-dashoffset="461.6px" fill="transparent" stroke-dasharray="461.6px" id="js-ccircle"></circle>
-                    <text x="50px" y="95px" fill="#36b300" id="js-cpercent">0%</text>
-                  </svg>
-                  <center>
-                    <span>  Completed Tasks
-                      <svg xmlns="http://www.w3.org/2000/svg" width="8px" height="8px" style="vertical-align: center;">
-                        <circle fill="#00ed24" stroke="none" cx="4" cy="4" r="4"/> 
-                      </svg>
-                    </span> 
-                    <p class ="task-amount" id="js-complete-amount"> 0
-                    </p>
-                    </center>                                                                
-            </div>
+  </div>
 
 
-              <div class="prog-text">
-                <svg width="167" height="167" viewBox="-20.875 -20.875 208.75 208.75" version="1.1" xmlns="http://www.w3.org/2000/svg" style="transform:rotate(-90deg)">
-                  <circle class="transfiller" r="73.5" cx="83.5" cy="83.5" fill="transparent" stroke="#e0e0e0" stroke-width="15" stroke-dasharray="461.6px" stroke-dashoffset="0"></circle>
-                  <circle r="73.5" cx="83.5" cy="83.5" stroke="#ff0a0a" stroke-width="15px" stroke-linecap="round" stroke-dashoffset="461.6px" fill="transparent" stroke-dasharray="461.6px" id="js-icircle"></circle>
-                  <text x="50px" y="95px" fill="#ff0000" id="js-ipercent">0%</text>
-                </svg>
-                <center>
-                  <span>  Incomplete Tasks
-                     <svg xmlns="http://www.w3.org/2000/svg" width="8px" height="8px" style="vertical-align: center;">
-                       <circle fill="#ed0000" stroke="none" cx="4" cy="4" r="4"/> 
-                     </svg>
-                   </span>  
-                 <p class ="task-amount" id="js-incomplete-amount"> 0
-                  </p>
-                </center> 
-              </div>
+  <div class="name-container grid">
+    <p class="card-1-name"> Analytics </p>
+  </div>
 
-
-                <div class="prog-text"> 
-                  <svg width="167px" height="167px" viewBox="-20.875 -20.875 208.75 208.75" version="1.1" xmlns="http://www.w3.org/2000/svg" style="transform:rotate(-90deg)">
-                    <circle class="transfiller" r="73.5" cx="83.5" cy="83.5" fill="transparent" stroke="#e0e0e0" stroke-width="15px" stroke-dasharray="461.6px" stroke-dashoffset="0"></circle>
-                    <circle r="73.5" cx="83.5" cy="83.5" stroke="#ff990a" stroke-width="15px" stroke-linecap="round" stroke-dashoffset="461.6px" fill="transparent" id="js-pcircle" stroke-dasharray="461.6px"></circle>
-                    <text x="46px" y="97px" fill="#ff932e" id="js-ppercent">0%</text>
-                  </svg>
-                 <center>
-                   <span>  Pending Tasks 
-                      <svg xmlns="http://www.w3.org/2000/svg" width="8px" height="8px" style="vertical-align: center;">
-                        <circle fill="#ff6600" stroke="none" cx="4" cy="4" r="4"/> 
-                      </svg>
-                    </span> 
-                  <p class ="task-amount" id="js-pending-amount"> 0
-                    </p>
-                  </center>
-                </div>
-
-            </div>
-
-        <div class="total-grid">
-          <p  style="  display: inline-block; grid-column:span 2; font-size: 1.5em; margin-left: 10px;"> Total Tasks:</p>  <span class="span-total" id="js-total" style="grid-column:span 1; font-size: 2em; justify-content: center; align-items: center;  "> 0 </span> 
-        </div>
-        </div>      
-
-        <div class="card-template card-score"> 
-      </div>
+  <div class="grid">
+    <div class="pos">
       <div class="card-template card-analytics">
         <div class="contain-svg">
 
           <div class="prog-text">
-            <svg width="167px" height="167px" viewBox="-20.875 -20.875 208.75 208.75" version="1.1" xmlns="http://www.w3.org/2000/svg" style="transform:rotate(-90deg)">
-                  <circle r="73.5" cx="83.5" cy="83.5" fill="transparent" stroke="#e0e0e0" stroke-width="15" stroke-dasharray="461.6px" stroke-dashoffset="0"></circle>
-                  <circle r="73.5" cx="83.5" cy="83.5" stroke="#39a300" stroke-width="15" stroke-linecap="round" stroke-dashoffset="97px" fill="transparent" stroke-dasharray="461.6px"></circle>
-                  <text x="50px" y="95px" fill="#36b300" id="js-cpercent">79%</text>
+            <svg width="167px" height="167px" viewBox="-20.875 -20.875 208.75 208.75" version="1.1"
+              xmlns="http://www.w3.org/2000/svg" style="transform:rotate(-90deg)">
+              <circle class="transfiller" r="73.5" cx="83.5" cy="83.5" fill="transparent" stroke="#e0e0e0"
+                stroke-width="15" stroke-dasharray="461.6px" stroke-dashoffset="0"></circle>
+              <circle r="73.5" cx="83.5" cy="83.5" stroke="#39a300" stroke-width="15" stroke-linecap="round"
+                stroke-dashoffset="461.6px" fill="transparent" stroke-dasharray="461.6px" id="js-ccircle"></circle>
+              <text x="50px" y="95px" fill="#36b300" id="js-cpercent">0%</text>
+            </svg>
+            <center>
+              <span> Completed Tasks
+                <svg xmlns="http://www.w3.org/2000/svg" width="8px" height="8px" style="vertical-align: center;">
+                  <circle fill="#00ed24" stroke="none" cx="4" cy="4" r="4" />
                 </svg>
-                <center>
-                  <span>  Completed Tasks
-                    <svg xmlns="http://www.w3.org/2000/svg" width="8px" height="8px" style="vertical-align: center;">
-                      <circle fill="#00ed24" stroke="none" cx="4" cy="4" r="4"/> 
-                    </svg>
-                  </span> 
-                  <p class ="task-amount js-complete-amount"> 10
-                  </p>
-                  </center> 
+              </span>
+              <p class="task-amount" id="js-complete-amount"> 0
+              </p>
+            </center>
           </div>
 
 
-            <div class="prog-text">
-              <svg width="167" height="167" viewBox="-20.875 -20.875 208.75 208.75" version="1.1" xmlns="http://www.w3.org/2000/svg" style="transform:rotate(-90deg)">
-                <circle r="73.5" cx="83.5" cy="83.5" fill="transparent" stroke="#e0e0e0" stroke-width="15" stroke-dasharray="461.6px" stroke-dashoffset="0"></circle>
-                <circle r="73.5" cx="83.5" cy="83.5" stroke="#ff0a0a" stroke-width="15px" stroke-linecap="round" stroke-dashoffset="97px" fill="transparent" stroke-dasharray="461.6px"></circle>
-                <text x="50px" y="95px" fill="#ff0000">79%</text>
-              </svg>
-              <center>
-                <span>  Incomplete Tasks
-                   <svg xmlns="http://www.w3.org/2000/svg" width="8px" height="8px" style="vertical-align: center;">
-                     <circle fill="#ed0000" stroke="none" cx="4" cy="4" r="4"/> 
-                   </svg>
-                 </span> 
-               <p class ="task-amount js-incomplete-amount">10
-                </p>
-              </center> 
-            </div>
-
-
-              <div class="prog-text"> 
-                <svg width="167px" height="167px" viewBox="-20.875 -20.875 208.75 208.75" version="1.1" xmlns="http://www.w3.org/2000/svg" style="transform:rotate(-90deg)">
-                  <circle r="73.5" cx="83.5" cy="83.5" fill="transparent" stroke="#e0e0e0" stroke-width="15px" stroke-dasharray="461.6px" stroke-dashoffset="461.6px"></circle>
-                  <circle r="73.5" cx="83.5" cy="83.5" stroke="#ff990a" stroke-width="15px" stroke-linecap="round" stroke-dashoffset="97px" fill="transparent" stroke-dasharray="461.6px"></circle>
-                  <text x="46px" y="97px" fill="#ff932e" id="js-ppercent">79%</text>
+          <div class="prog-text">
+            <svg width="167" height="167" viewBox="-20.875 -20.875 208.75 208.75" version="1.1"
+              xmlns="http://www.w3.org/2000/svg" style="transform:rotate(-90deg)">
+              <circle class="transfiller" r="73.5" cx="83.5" cy="83.5" fill="transparent" stroke="#e0e0e0"
+                stroke-width="15" stroke-dasharray="461.6px" stroke-dashoffset="0"></circle>
+              <circle r="73.5" cx="83.5" cy="83.5" stroke="#ff0a0a" stroke-width="15px" stroke-linecap="round"
+                stroke-dashoffset="461.6px" fill="transparent" stroke-dasharray="461.6px" id="js-icircle"></circle>
+              <text x="50px" y="95px" fill="#ff0000" id="js-ipercent">0%</text>
+            </svg>
+            <center>
+              <span> Incomplete Tasks
+                <svg xmlns="http://www.w3.org/2000/svg" width="8px" height="8px" style="vertical-align: center;">
+                  <circle fill="#ed0000" stroke="none" cx="4" cy="4" r="4" />
                 </svg>
-               <center>
-                 <span>  Pending Tasks 
-                    <svg xmlns="http://www.w3.org/2000/svg" width="8px" height="8px" style="vertical-align: center;">
-                      <circle fill="#ff6600" stroke="none" cx="4" cy="4" r="4"/> 
-                    </svg>
-                  </span> 
-                <p class ="task-amount js-pending-amount">10
-                  </p>
-                </center>
-              </div>
-              
+              </span>
+              <p class="task-amount" id="js-incomplete-amount"> 0
+              </p>
+            </center>
           </div>
 
-      <div class="total-grid">
-        <p class="p-total" style="display: inline-block; grid-column:span 2; font-size: 1.5em; margin-left: 10px;"> Total Tasks:</p>  <span class="span-total" style="grid-column:span 1; font-size: 1.5em; justify-content: center; "> 1 </span> 
+
+          <div class="prog-text">
+            <svg width="167px" height="167px" viewBox="-20.875 -20.875 208.75 208.75" version="1.1"
+              xmlns="http://www.w3.org/2000/svg" style="transform:rotate(-90deg)">
+              <circle class="transfiller" r="73.5" cx="83.5" cy="83.5" fill="transparent" stroke="#e0e0e0"
+                stroke-width="15px" stroke-dasharray="461.6px" stroke-dashoffset="0"></circle>
+              <circle r="73.5" cx="83.5" cy="83.5" stroke="#ff990a" stroke-width="15px" stroke-linecap="round"
+                stroke-dashoffset="461.6px" fill="transparent" id="js-pcircle" stroke-dasharray="461.6px"></circle>
+              <text x="46px" y="97px" fill="#ff932e" id="js-ppercent">0%</text>
+            </svg>
+            <center>
+              <span> Pending Tasks
+                <svg xmlns="http://www.w3.org/2000/svg" width="8px" height="8px" style="vertical-align: center;">
+                  <circle fill="#ff6600" stroke="none" cx="4" cy="4" r="4" />
+                </svg>
+              </span>
+              <p class="task-amount" id="js-pending-amount"> 0
+              </p>
+            </center>
+          </div>
+
+        </div>
+
+        <div class="total-grid">
+          <p style="  display: inline-block; grid-column:span 2; font-size: 1.5em; margin-left: 10px;"> Total Tasks:</p>
+          <span class="span-total" id="js-total"
+            style="grid-column:span 1; font-size: 2em; justify-content: center; align-items: center;  "> 0 </span>
+        </div>
       </div>
-      </div>      
-    </div>
-        </main>
 
-   
+
+      <div> Lol</div>
+
+    </div>
+
+    <div class="card-template card-score">
+      <div class="cat-task-container" id="cattask">
+        <div class="category-container" id="cat">
+          <div class="totalScore">
+            <p class="scoreP"> TOTAL SCORE: </p>
+            <p class="scoreP" id="js-tScore"> 10 </p>
+          </div>
+          
+          <div class="cat-and-task" id="js-cat-task-cat">
+           <div class="category-card" id="js-cat-card">
+    
+            <div class="cat-name">
+              <p class="pCategory-name"> Insert Name </p>
+              <span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" style="vertical-align: middle;">
+                  <circle fill="#ffef09" stroke="none" cx="8" cy="8" r="8" />
+                  <img width="12" height="12" src="https://img.icons8.com/material-rounded/24/star--v1.png" alt="star--v1"
+                    style="position: relative; left:-14px; bottom: -2px" />
+                </svg>
+                <p class="pCategory-name"
+                  style="vertical-align: middle; position: relative; margin-left: -10px; align-items: center;">Category
+                  Score: 5 </p>
+            </div>
+            </span>
+    
+            <div class="cat-name" style="margin-right: 0px;">
+              <span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="8px" height="8px" style="vertical-align: center;">
+                  <circle fill="#00ed24" stroke="none" cx="4" cy="4" r="4" />
+                </svg>
+                <p class="pCategory"> Completed </p>
+              </span>
+              <a href="#" class="task-dropdown" id="js-dropDownClick"
+                onclick="getCatTasks(document.getElementById('js-cat-task-cat'));">
+                <p class="pCategory" id="js-dropText" style="vertical-align: top;">Display Tasks</p>
+                <svg id="js-dropClick" width="24px" height="24px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    
+                  <rect x="0" fill="none" width="24" height="24" />
+    
+                  <g>
+    
+                    <path d="M7 10l5 5 5-5" />
+    
+                  </g>
+    
+                </svg>
+                </span>
+              </a>
+            </div>
+    
+    
+            </span>
+          </div>
+        </div>
+    
+        <div class="cat-and-task" id="js-cat-task-cat">
+          <div class="category-card" id="js-cat-card">
+    
+           <div class="cat-name">
+             <p class="pCategory-name"> Insert Name </p>
+             <span>
+               <svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" style="vertical-align: middle;">
+                 <circle fill="#ffef09" stroke="none" cx="8" cy="8" r="8" />
+                 <img width="12" height="12" src="https://img.icons8.com/material-rounded/24/star--v1.png" alt="star--v1"
+                   style="position: relative; left:-14px; bottom: -2px" />
+               </svg>
+               <p class="pCategory-name"
+                 style="vertical-align: middle; position: relative; margin-left: -10px; align-items: center;">Category
+                 Score: 5 </p>
+           </div>
+           </span>
+    
+           <div class="cat-name" style="margin-right: 0px;">
+             <span>
+               <svg xmlns="http://www.w3.org/2000/svg" width="8px" height="8px" style="vertical-align: center;">
+                 <circle fill="#00ed24" stroke="none" cx="4" cy="4" r="4" />
+               </svg>
+               <p class="pCategory"> Completed </p>
+             </span>
+             <a href="#" class="task-dropdown" id="js-dropDownClick"
+               onclick="getCatTasks(document.getElementById('js-cat-task-cat'));">
+               <p class="pCategory" id="js-dropText" style="vertical-align: top;">Display Tasks</p>
+               <svg id="js-dropClick" width="24px" height="24px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    
+                 <rect x="0" fill="none" width="24" height="24" />
+    
+                 <g>
+    
+                   <path d="M7 10l5 5 5-5" />
+    
+                 </g>
+    
+               </svg>
+               </span>
+             </a>
+           </div>
+    
+    
+           </span>
+         </div>
+       </div>
+        </div>
+    
+      </div>
+      
+    </div>
+    </di>
+    </main>
+
+
 </body>
 
 </html>
