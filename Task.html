@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <link rel="stylesheet" href="CSS Files/Task.css">
+    <link rel="stylesheet" href="CSS Files/Sidebar.css">
+    <link rel="stylesheet" href="CSS Files/Header.css">
+    <link rel="stylesheet" href="CSS Files/Modal.css">
+    <script src="Javascript Files/Task.js" defer></script>
+    <script src="Javascript Files/Side.js" defer></script>
+  </head> 
+
+  <body>
+
+    <header>
+
+    </header>
+  
+    <div class="js-sidebar">
+  
+    </div>
+    
+    <div class="task-modal" id="js-taskModal">
+      <div class="modal-title">
+        <p class="title"> Add Task </p>
+      </div>
+      <div class="modal-body" id="js-task-modal-body">
+        <div class="task-Name">
+          <span> Name: </span> <input type="text" id="js-taskName">
+          </div> 
+        <div class="description-container">
+          <form class="add-task-details">
+            <span class="description"> Please type a description of the task below </span>
+            <textarea class="text-description" maxlength='1000' minlength='20'>  
+            </textarea>
+            
+            <div class="due-date">
+              <span> Due Date: </span>
+              <input type="date" class="date-input" id="js-dateSelect">
+            </div>
+        
+            <div class="task-buttons">
+              <button type="button" class="add-task-button" onclick="addTask()"> Add Task </button>
+              <button type="button" class="cancel-task-button" id="js-no-add-task"> Cancel </button>
+  
+            </div>  
+          </form>
+        </div>
+      </div>
+  
+    </div>
+
+
+    <div class="category-modal" id="js-catModal">
+      <div class="modal-title">
+        <p class="title"> Add Category </p>
+      </div>
+      <div class="modal-color" id="js-modal-body-color">
+      <div class="modal-body" id="js-cat-modal-body">
+        <div class="cat-Name">
+        <span> Name: </span> <input type="text" id="js-input-catName">
+        </div> 
+        <div class="color-chooser">
+          <span> Category Color: </span>
+          <select class="color-dropdown" id="js-selected-color">
+            <option style="color:black"> Select </option>
+            <option id="js-blue"> Blue </option>
+            <option id="js-red"> Red </option>
+            <option id="js-green"> Green </option>
+            <option id="js-pink"> Pink </option>
+            <option id="js-gray"> Gray </option>
+          </select>
+        </div>
+        <div class="cat-buttons">
+          <button class="add-cat" onclick="addCategory()"> Add </button>
+          <button class="cancel-cat" id="js-no-add-cat" > Cancel </button>
+  
+        </div>
+      </div>
+    </div>
+    </div>
+  
+    
+  
+    <div id="screen-overlay"></div>
+    
+    <div class="grid">  
+      <div class="category-container">
+        <div class="cat-option">
+          <p style="color:rgb(23, 58, 23);"> Categories </p>
+          <div class="sort-cat">
+            <p> Sort-By  </p>
+            <select class="sort-dropdown">
+              <option id="C-E-L"> Select </option>
+              <option id="C-E-L"> Earliest-Latest </option>
+              <option id="C-L-E"> Latest-Earliest </option>
+              <option id="C-IP"> In progress </option>
+              <option id="C-C"> Completed </option>
+            </select>
+          </div>  
+
+          
+        </div>
+        <div class="add-delete-cat">
+          <div class="deleteCat" id="js-deleteCatManager">
+            <button class="delete-cat-button" id="js-cat-deletor"> Delete Category </button>
+            <button class="cancelDelete-cat-button" data-cancelDelCat> Cancel </button>
+          </div>
+          <button class="Add-cat-button" data-CatAddButton id="js-cat-openModal"> Add category </button>
+        </div>
+        
+        
+        <div class="cat-display">
+          
+        </div>
+      </div>
+    
+      <hr class="vline">
+      
+
+      
+    
+
+      <div class="task-container">
+        <div class="cat-option">
+          <p style="color:rgb(23, 58, 23);" id="js-catTasks-name"> Tasks </p>
+          <div class="sort-cat">
+            <p> Sort-By  </p>
+            <select class="sort-dropdown">
+              <option id="C-E-L"> Select </option>
+              <option id="C-E-L"> Earliest-Latest </option>
+              <option id="C-L-E"> Latest-Earliest </option>
+              <option id="C-IP"> In progress </option>
+              <option id="C-C"> Completed </option>
+            </select>
+          </div>  
+
+          
+        </div>
+        <button class="Add-task-button" id="js-task-openModal"> Add Task </button>
+        <div class="display-task">
+    </div>
+      </div>
+    </div>
+    
+  </body>
+
+</html>

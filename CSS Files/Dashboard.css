@@ -17,7 +17,7 @@ padding: 0;
 margin: 0;
 }
 
-@media (640px <= width <=1550px ){
+@media (600px <= width <=1550px ){
 
 
  
@@ -25,7 +25,7 @@ margin: 0;
   display: flex;
   margin: auto;
   align-items: center;
-  justify-content: space-evenly ;
+  justify-content: space-evenly;
   max-width: 1200px;
   min-width: 300px;
   height: 90px;
@@ -36,26 +36,34 @@ margin: 0;
   body{
     min-width: 300px;
     height: 100%;
-    
+
   }
 
 
 
 .pos {
-  min-width:167px;
-  width: 100%;
+  width: 100% !important;
+  max-width: 100% !important;
+  margin-left:0px !important;
+  flex-direction: row !important;
+  grid-column: 1/ span 12  !important;
+  overflow: none !important;
+  margin-right: 10px !important;
 
-  grid-column: span 12;
-  margin-right: 50px;
+
+  
 }
 .card-analytics{
   
+  overflow:hidden;
   overflow-x: scroll;
 
-  margin-right: 50px;
+  margin-right: 40px;
 }
 
-
+.card-2-name{
+  display: none !important;
+}
 
 .span-total{
   display: flex;
@@ -69,10 +77,12 @@ margin: 0;
   }
 
   .card-score{
-    min-width: 630px;
+    min-width: auto;
     height: 100%;
+    width: 98% !important;
+    margin: 5px 5px !important;
+    grid-column: 1 /span 12 !important;
     
-    overflow-x: scroll
   }
 
 }
@@ -81,11 +91,22 @@ margin: 0;
 @media (0px <= width < 858px) {
 .pos {
   min-width:167px;
-  overflow-x: scroll;
   grid-column: span 12 !important;
-  margin-left: 10px;
-  margin-right: 10px;
+  margin-left: 10px !important;
+  margin-right: 6px !important;
+  overflow: none !important;
 
+  
+
+}
+
+
+.card-analytics{
+  overflow-x:none !important;
+  overflow: none;
+}
+.card-2-name{
+  display: none !important;
 }
 
 .card-1-name{
@@ -94,9 +115,8 @@ margin: 0;
 }
 
 .card-score {
-overflow-x: scroll;
-grid-column: span 12 !important;
-margin-left: 5px;
+grid-column: 1/ span 12 !important;
+margin-left: 5px !important;
 width: 98% !important;
 
 
@@ -104,8 +124,8 @@ width: 98% !important;
 } 
 
 body{
-background-color: rgba(192, 192, 192, 0.666);
-min-width: 300px;
+  background-color: rgb(229, 240, 240);
+  min-width: 300px;
 height: auto;
 
 
@@ -118,7 +138,7 @@ font-family:'Signika', sans-serif;
 .grid{
 display: grid;
 grid-template-columns: repeat(12 , 1fr);
-gap:30px;
+gap:30px; 
 width:auto;
 
 }
@@ -150,10 +170,11 @@ background-color: white;
 .pos{
   display: flex;
   flex-direction: column;
-  margin-bottom: 50px;
-  grid-column: 2 / span 4;
+  grid-column: 2 / span 3;
   overflow: none;
- 
+  margin-left: -80px;
+  max-width: 550px;
+
   
 
 }
@@ -169,7 +190,7 @@ font-family: 'Roboto';
 font-size: 2em;
 font-weight: bold;
 color:rgb(75, 141, 134);
-vertical-align: middle ;
+vertical-align: middle;
 
 
 }
@@ -199,8 +220,10 @@ height: 350px;
 max-height: 350px;
 display: flex;
 flex-direction: column;
-margin-bottom: 50px;
-
+margin-bottom: 30px;
+  margin-left: 5px;
+  overflow-x: scroll;
+  
 
 }
 
@@ -210,9 +233,11 @@ display: grid; grid-template-columns: 1fr 1fr 1fr;
 
 
 .card-score{
-grid-column: 6 / span 6;
-  width: 100%;
+grid-column: 5 / span 8;
+  width: 98%;
   height: 100%;
+  margin-left: 0px;
+  margin-right: 30px;
 }
 
 
@@ -233,9 +258,11 @@ color:rgb(23, 58, 23);
 }
 
 .card-2-name{
+  margin-top:20px;
+
 width: fit-content;
 display: inline;  
-grid-column: 9 / span 5;
+grid-column: 7 / span 5;
 font-size: 2em;
 color:rgb(23, 58, 23);
 }
@@ -268,6 +295,8 @@ font-size: 40px;
 margin-top: 10px;
 animation: fadein;
 animation-duration: 1s;
+-webkit-animation: fadein;
+-webkit-animation-duration: 1s;
 }
 
 
@@ -281,11 +310,22 @@ animation-duration: 1s;
 
 }
 
+@-webkit-keyframes fadein {
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+  
+  }
+
 .transfiller{
-animation: transparentThing .5s linear;
+  animation: transparentThing .5s linear;
+-webkit-animation: transparentThing .5s linear;
 }
 
-@keyframes transparentThing {
+ @-webkit-keyframes transparentThing {
 0%{
  stroke-dashoffset: 461.6px;
 }
@@ -294,8 +334,19 @@ animation: transparentThing .5s linear;
   stroke-dashoffset: 0px;
  }
 }
+
+@keyframes transparentThing {
+  0%{
+   stroke-dashoffset: 461.6px;
+  }
+  
+  100%{
+    stroke-dashoffset: 0px;
+   }
+  }
 .filler{
-transition: all 2s ease ;
+-webkit-transition: stroke-dashoffset 2s ease 0s;
+transition: stroke-dashoffset 2s ease 0s;
 }
 
 img.offlogo {

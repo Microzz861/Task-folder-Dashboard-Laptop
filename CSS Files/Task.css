@@ -1,0 +1,430 @@
+@import url('https://fonts.googleapis.com/css2?family=ADLaM+Display&family=Noto+Sans+Sogdian&family=Roboto:wght@500&family=Signika:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=ADLaM+Display&family=Noto+Sans+Sogdian&family=Roboto:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=ADLaM+Display&family=Lato&family=Noto+Sans+Sogdian&family=Roboto:wght@500&family=Signika:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@100;200;300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=ADLaM+Display&family=Lato&family=Noto+Sans+Sogdian&family=Open+Sans&family=Roboto:wght@500&family=Signika:wght@700&display=swap');
+
+.grid{
+  display: grid;
+  grid-template-columns: repeat(12 , 1fr);
+  gap:30px; 
+  width:auto;  
+  margin-top: 130px;
+  
+  }
+
+  .flex{
+    display: flex;
+    margin-top: 130px;
+
+  }
+  
+
+.category-container{
+ grid-column: 1 / span 5;
+ background-color: aliceblue;
+ width: 100%;
+ max-height: 750px;
+ height: 750px;
+ border-radius: 32px;
+ background: linear-gradient(145deg, #ffffff, #ffffff);
+ box-shadow:  28px 28px 57px #e6e6e6,-28px -28px 57px #ffffff;
+ display: flex;
+ flex-direction: column;
+ overflow: hidden !important;
+ overflow-y: scroll !important;
+ 
+}
+
+body{
+  background-color: rgb(211, 201, 201);
+
+}
+.task-container{
+  grid-column: 6/ span 7;
+  background-color: aliceblue;
+  height: 100%;
+  width: 100%;
+  border-radius: 32px;
+  background: #ffffff;
+  box-shadow:  28px 28px 57px #e6e6e6, -28px -28px 57px #ffffff;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden !important;
+ overflow-y: scroll !important;
+ 
+}
+
+.task-name{
+  margin: 10px 10px;
+  display: flex;
+  justify-content: space-between;
+}
+  
+.full-cat-container:hover{
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, .1);
+}
+
+.vline
+{
+    position: absolute;
+    top:130px;
+    left:calc(41.5%);
+    bottom:1px; 
+    border:none;
+    border-right:solid 3px brown;
+    z-index:0;
+    
+}
+.cat-option{
+  margin: 10px 10px;
+  display: flex;
+  justify-content: space-between;
+
+}
+
+.cat-Name{
+  margin: 10px 10px;
+  display: flex;
+  justify-content: space-between;
+
+}
+
+.task{
+  border-radius: 30px;
+  border: 1px solid black;
+  box-shadow: 1px 1px 2px rgb(104, 102, 102),
+  -1px -1px 2px rgb(103, 103, 103);
+  width: 90%;
+  height: 150px;
+  margin: 15px 0px 15px 10px;
+}
+
+.task p, .task span{
+  font-family: 'Lato';
+  font-size: 1.3em;
+  margin: 0px 5px 0px 10px;
+  display: inline-block;
+}
+
+.task-checkbox{
+  width: 30px;
+  height: 20px;
+
+}
+
+.cat-option p,.cat-option span, p.cat-option{
+  font-family: 'Lato';
+  font-size: 1.7em;
+  margin: 0px 5px 0px 10px;
+  }
+
+  .sort-cat{
+    display: flex;
+  
+  }
+
+  .display-task{
+    margin: 10px 0px 20px 0px;
+    border-top: 2px solid rgb(39, 38, 38);
+    display: flex;
+    flex-direction: column;
+  }
+.cat-Name p,.cat-Name span, .progress p, .task-amount span{
+font-family: 'Lato';
+font-size: 1.4em;
+margin: 0px 5px 0px 10px;
+}
+
+.sort-cat{
+  display: flex;
+
+}
+
+.sort-dropdown{
+  background: none;
+  font-family: 'Lato';
+  font-size: 1.3em;
+  border-radius: 30px;
+  margin-left: 5px;
+  padding: 5px;
+  border: 2px solid black;
+
+
+}
+
+
+
+.Add-cat-button{
+  background-color: rgb(153, 26, 153);
+  display: flex;
+  justify-content: center;
+  border-radius: 50px;
+  font-size: 1.4em;
+  color:white;
+  align-items: center;
+  box-shadow: 2px 2px 6px rgb(149, 41, 173);
+  border: none;
+  height: 50px;
+  width: 100%;
+  cursor: pointer;
+  animation: activate ease 250ms;
+  
+}
+
+.Add-task-button{
+  background-color: rgb(153, 45, 26);
+  display: flex;
+  justify-content: center;
+  border-radius: 50px;
+  font-size: 1.4em;
+  color:white;
+  align-items: center;
+  margin: 10px 50px 10px 50px;
+  cursor: pointer;
+  box-shadow: 2px 2px 6px rgb(173, 41, 41);
+  border: none;
+  height: 50px;
+  
+}
+.cat-display{
+  margin: 10px 0px 20px 0px;
+  border-top: 2px solid rgb(39, 38, 38);
+  display: flex;
+  flex-direction: column;
+}
+
+.cat-color{
+  background-color: rgb(0, 255, 8);
+  border-radius: 30px 0px 0px 30px;
+}
+.category{
+  border-radius: 30px;
+  border: 1px solid black;
+  box-shadow: 2px 2px 1px rgb(11, 11, 11),
+  -2px -2px 1px rgb(11, 11, 11);
+  width: 90%;
+  margin: 15px 0px 15px 10px;
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  z-index: 10;
+}
+
+.task-description{
+  max-width: 800px;
+
+}
+
+.task-description p{
+  font-size: 1.1em;
+  font-family: 'Roboto';
+  text-indent: 2px;
+  /*Keep the - and allow the rest to bve added to this p*/
+}
+
+.add-delete-cat{
+    display: flex;
+    margin: 10px 50px 10px 50px;
+
+}
+.deleteCat{
+  justify-content: center;
+  width: 100%;
+  visibility: hidden;  
+  display: none;
+  opacity: 0;
+  transition: opacity ease-in 200ms;
+
+  
+}
+
+.deleteCat-activated{
+  visibility: visible !important;
+  justify-content: space-around;
+  display: flex;
+  
+
+}
+
+.delete-cat-button{
+  height: 50px;
+  color: white;
+  background-color: rgba(255,0,0,.8);
+  border:1px solid gray;
+  border-radius: 5px;
+  width: 30%;
+  cursor: pointer;
+  font-size: 1.4em;
+  font-family: 'Open Sans';
+
+}
+
+.cancelDelete-cat-button{
+  height: 50px;
+  color: white;
+  background-color: rgba(174, 0, 255, 0.8);
+  border: 1px solid gray;
+  border-radius: 5px;
+  width: 30%;
+  cursor: pointer;
+  font-size: 1.4em;
+  font-family: 'Open Sans';
+
+}
+
+.Add-cat-button-deactivated{
+  
+  animation: deactivate ease 250ms;
+  
+}
+
+@keyframes deactivate{
+  from {width:100%}
+   to {width: 0%;
+    }
+}
+
+@keyframes activate{
+  from {width:0%}
+   to {width: 100%;
+    }
+}
+
+@keyframes mid-lr{
+  from{
+    justify-content: left;
+
+  }
+  to{
+    justify-content: center;
+  }
+}
+
+@-webkit-keyframes mid-lr{
+  from{
+    justify-content: left;
+
+  }
+  to{
+    justify-content: center;
+  }
+}
+@-webkit-keyframes bar{
+
+  0%{
+    width: 0%;
+  }
+  to{
+     opacity: 1;
+  }
+}
+
+@keyframes bar{
+
+  0%{
+    width: 0%;
+  }
+  to{
+     opacity: 1;
+  }
+}
+
+.Therest{
+  background-color: white;
+  overflow: hidden;
+  z-index: 1;
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+}
+.progress-bar{
+  width: 150px;
+  height: 13px;
+  background: #e6e6e6;
+  border-radius: 20px;
+  margin-top: 3px;
+
+  
+}
+.progress{
+  width: fit-content;
+}
+
+.task-progress{
+  margin: 0px 15px 0px 10px;
+  display: flex;
+  justify-content: space-between;
+
+}
+.coat-bar{
+  background: linear-gradient(315deg, #2EAAFA,#1F2F98);
+  width: 0%;
+  height: 100%;
+  border-radius:20px;
+  animation: bar 1s;
+}
+
+.percent{
+ color: #2EAAFA;
+ position: relative;
+ bottom: 3px;
+ font-size: 1.1em !important;
+ font-weight: bold;
+}
+
+.contain-bar-percent{
+  display: flex;
+  width: max-content;
+}
+
+.task-date{
+  margin: 4px 10px 8px 10px;
+  display: flex;
+  justify-content: space-between;
+  vertical-align: top;
+
+
+}
+
+.task-date p{ 
+  font-family: arial, consolas, sans-serif;
+  font-size: 1.3em;           
+  font-weight: 700;
+}
+  
+.full-cat-container{
+  display: flex;
+  height: fit-content;
+
+}
+.manage-cat{
+  display:inline;
+  border-bottom-right-radius: 30px;
+  border-top-right-radius: 30px;
+  background-color: red;
+  position: relative;
+  top: 16px;  
+  right: 80px; /* This will be 25 with the hover/ onmouseover animation*/
+  width: 80px;
+  height: 115px !important;
+  display: flex;
+  align-items: center;
+  justify-content:end;
+  color: white;
+  height: inherit;
+  z-index: 0;
+  box-shadow: 1px 1px 2px rgb(247, 9, 9),
+  -1px -1px 2px rgb(234, 14, 14);
+  cursor: pointer;
+  border: 0;
+
+}
+
+.manage-cat:active{
+scale: 1.01;
+box-shadow: 1px 1px 5px rgb(247, 9, 9),
+  -1px -1px 5px rgb(234, 14, 14);
+} 
+
+
+  

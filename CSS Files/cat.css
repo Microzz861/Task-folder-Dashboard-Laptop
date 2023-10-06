@@ -1,6 +1,33 @@
 @import url('https://fonts.googleapis.com/css2?family=ADLaM+Display&family=Noto+Sans+Sogdian&family=Roboto:wght@500&family=Signika:wght@700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=ADLaM+Display&family=Noto+Sans+Sogdian&family=Roboto:wght@500&display=swap');
 
+
+
+
+@media (0px <= width < 520px) {
+  .pCategory-name1{
+    margin-left: 25px !important;
+    position: relative; 
+    bottom: 20px !important;
+    font-family: 'Roboto';
+    font-weight: 500;
+  }
+  
+  
+
+  .pCategory-name{
+    font-size: 1.1em !important;
+  }
+
+ .move-back-a-little{
+  margin-left: -20px !important;
+}
+}
+
+
+.move-back-a-little{
+  margin-left: 0px;
+}
 .cat-and-task{
   margin-bottom: 20px;
 }
@@ -12,9 +39,18 @@
   border-radius: 10px;
   display: flex;
   flex-direction: column;
-  z-index: 1;
+  z-index: 0;
+  margin-top: 20px;
 }
 
+.pCategory-name1{
+  font-size: 1.6em !important;
+  display: inline-block;
+  margin: 0;
+  font-family: 'Roboto';
+  font-weight: 500; 
+
+}
 .totalScore{
   display: flex;
   margin: 5px 20px;
@@ -24,8 +60,8 @@
 }
 
 .scoreP{
-  font-size: 1.5em;
-  font-family: 'Roboto';
+  font-size: 2em;
+ 
   font-weight: 500;
   margin-bottom: 5px;
 }
@@ -36,7 +72,7 @@
   margin: 0px 20px;
   flex-direction: column;
   background-color: white;
-  z-index: 100;
+  z-index: 1;
   
 }
 
@@ -78,6 +114,13 @@
   bottom: 16px;
   z-index: 1;
   
+}
+
+.pCategory-name12{
+  vertical-align: middle; 
+  position: relative;
+  margin-left: -10px;
+  align-items: center;
 }
 .cat-name{
   display: flex;

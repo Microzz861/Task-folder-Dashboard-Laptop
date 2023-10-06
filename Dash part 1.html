@@ -5,11 +5,9 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="CSS Files/Dashboard.css">
-  <script src="Javascript Files/Dasher1.js"></script>
-  <script src="Javascript Files/Side.js"></script>
   <link rel="stylesheet" href="CSS Files/Sidebar.css">
   <link rel="stylesheet" href="CSS Files/cat.css">
-  <script src="Javascript Files/Category.js"></script>
+  <link rel="stylesheet" href="CSS Files/Today.css">
 </head>
 
 <body>
@@ -25,6 +23,8 @@
 
   <div class="name-container grid">
     <p class="card-1-name"> Analytics </p>
+    <p class="card-2-name"> Category Score </p>
+
   </div>
 
   <div class="grid">
@@ -34,7 +34,7 @@
 
           <div class="prog-text">
             <svg width="167px" height="167px" viewBox="-20.875 -20.875 208.75 208.75" version="1.1"
-              xmlns="http://www.w3.org/2000/svg" style="transform:rotate(-90deg)">
+              xmlns="http://www.w3.org/2000/svg" style="transform:rotate(-90deg); -webkit-transform: rotate(-90deg);">
               <circle class="transfiller" r="73.5" cx="83.5" cy="83.5" fill="transparent" stroke="#e0e0e0"
                 stroke-width="15" stroke-dasharray="461.6px" stroke-dashoffset="0"></circle>
               <circle r="73.5" cx="83.5" cy="83.5" stroke="#39a300" stroke-width="15" stroke-linecap="round"
@@ -55,7 +55,7 @@
 
           <div class="prog-text">
             <svg width="167" height="167" viewBox="-20.875 -20.875 208.75 208.75" version="1.1"
-              xmlns="http://www.w3.org/2000/svg" style="transform:rotate(-90deg)">
+              xmlns="http://www.w3.org/2000/svg" style="transform:rotate(-90deg); -webkit-transform: rotate(-90deg);">
               <circle class="transfiller" r="73.5" cx="83.5" cy="83.5" fill="transparent" stroke="#e0e0e0"
                 stroke-width="15" stroke-dasharray="461.6px" stroke-dashoffset="0"></circle>
               <circle r="73.5" cx="83.5" cy="83.5" stroke="#ff0a0a" stroke-width="15px" stroke-linecap="round"
@@ -76,7 +76,7 @@
 
           <div class="prog-text">
             <svg width="167px" height="167px" viewBox="-20.875 -20.875 208.75 208.75" version="1.1"
-              xmlns="http://www.w3.org/2000/svg" style="transform:rotate(-90deg)">
+              xmlns="http://www.w3.org/2000/svg" style="transform:rotate(-90deg); -webkit-transform: rotate(-90deg);">
               <circle class="transfiller" r="73.5" cx="83.5" cy="83.5" fill="transparent" stroke="#e0e0e0"
                 stroke-width="15px" stroke-dasharray="461.6px" stroke-dashoffset="0"></circle>
               <circle r="73.5" cx="83.5" cy="83.5" stroke="#ff990a" stroke-width="15px" stroke-linecap="round"
@@ -104,7 +104,21 @@
       </div>
 
 
-      <div> Lol</div>
+      <div class="today-card-container card-template">
+        <div class="today-name">
+          <p> Today's Tasks </p>
+        </div>
+        <div class="tday-task-stat">
+          <p style="  font-size: 1.3em; margin:6px 0px"> Task Status: </p>
+          <select class="ddown">
+            <option> Completed </option>
+            <option> Incomplete </option>
+            <option> Pending </option>
+          </select>
+        </div>
+        
+        
+      </div>
 
     </div>
 
@@ -121,15 +135,14 @@
     
             <div class="cat-name">
               <p class="pCategory-name"> Insert Name </p>
-              <span>
+              <span class="move-back-a-little">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" style="vertical-align: middle;">
                   <circle fill="#ffef09" stroke="none" cx="8" cy="8" r="8" />
                   <img width="12" height="12" src="https://img.icons8.com/material-rounded/24/star--v1.png" alt="star--v1"
                     style="position: relative; left:-14px; bottom: -2px" />
                 </svg>
-                <p class="pCategory-name"
-                  style="vertical-align: middle; position: relative; margin-left: -10px; align-items: center;">Category
-                  Score: 5 </p>
+                <p class="pCategory-name1"
+                  style="vertical-align: middle; position: relative; margin-left: -10px; align-items: center;">Category Score: 5 </p>
             </div>
             </span>
     
@@ -165,18 +178,16 @@
     
         <div class="cat-and-task" id="js-cat-task-cat">
           <div class="category-card" id="js-cat-card">
-    
+            
            <div class="cat-name">
              <p class="pCategory-name"> Insert Name </p>
-             <span>
+             <span class="move-back-a-little">
                <svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" style="vertical-align: middle;">
                  <circle fill="#ffef09" stroke="none" cx="8" cy="8" r="8" />
                  <img width="12" height="12" src="https://img.icons8.com/material-rounded/24/star--v1.png" alt="star--v1"
                    style="position: relative; left:-14px; bottom: -2px" />
                </svg>
-               <p class="pCategory-name"
-                 style="vertical-align: middle; position: relative; margin-left: -10px; align-items: center;">Category
-                 Score: 5 </p>
+               <p class="pCategory-name1"> Category Score: 5 </p>
            </div>
            </span>
     
@@ -214,9 +225,12 @@
       </div>
       
     </div>
-    </di>
+    </div>
     </main>
 
+    <script src="Javascript Files/Dasher1.js"></script>
+    <script src="Javascript Files/Side.js"></script>
+    <script src="Javascript Files/Category.js"></script>
 
 </body>
 
